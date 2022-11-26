@@ -2,9 +2,11 @@ from user_agent import generate_user_agent
 import requests
 import unique_string_in_file
 
+# сайт, возвращающий только ip адрес подключаемого
 url = "http://icanhazip.com"
 
-
+# проверяет прокси из одного файла и выписывает их в отдельный файл
+# на входе нужны названия файлов
 def cheсk_proxies(proxyFileName, validProxyFileName):
     proxyFile = open(proxyFileName, "r")
     validProxyFile = open(validProxyFileName, "a")

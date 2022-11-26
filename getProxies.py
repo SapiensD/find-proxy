@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-
+# парсим https://free-proxy-list.net и добавляем все спаршенные прокси
+# в отдельный файл
 def write_proxies_in_file(proxyFileName):
     url = "https://free-proxy-list.net/"
     soup = bs(requests.get(url).content, "html.parser")

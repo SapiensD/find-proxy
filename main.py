@@ -1,16 +1,17 @@
 import getProxies
 import checkProxies
-import unique_string_in_file
 
 
 proxyFileName = "proxy.txt"
 validProxyFileName = "validProxy.txt"
 
-getProxies.write_proxies_in_file(proxyFileName)
-checkProxies.cheсk_proxies(proxyFileName, validProxyFileName)
+if __name__ == '__main__':
+    getProxies.write_proxies_in_file(proxyFileName)
+    checkProxies.cheсk_proxies(proxyFileName, validProxyFileName)
 
 
 """
+# соединение двух файлов валидных прокси без повторений
 proxy_file = open("validProxy.txt", "r")
 proxy_file2 = open("valid_proxy.txt", "a")
 
